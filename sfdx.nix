@@ -7,7 +7,7 @@ stdenv.mkDerivation {
   src = fetchurl {
     url =
       "https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz";
-    sha256 = "1hhaqd11a31izi81bz8r8vfivljz3siczmy3bm0dxq2cxs3klp7x";
+    sha256 = "qHslfEamZp5JvxjSbHeMmQj3/ibYDQtWXYAp83AkHws=";
   };
 
   dontBuild = true;
