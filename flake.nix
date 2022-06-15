@@ -11,7 +11,9 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         sfdx-cli = (pkgs.callPackage ./default.nix {
-          # NOTE: this doesn't work with the latest version of node!
+          inherit pkgs system;
+          # NOTE: we have to use node 14 or less, otherwise this won't build!
+          # I would like to fix this!
           nodejs = pkgs.nodejs-14_x;
         }).sfdx-cli;
       in rec {
