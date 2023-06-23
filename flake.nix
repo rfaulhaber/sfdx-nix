@@ -18,7 +18,12 @@
           inherit pkgs system;
           nodejs = pkgs.nodejs_20;
         })
-        .sfdx-cli;
+        .sfdx-cli
+        // {
+          # we have to override the package name so nix can find the right executable
+          pname = "sfdx";
+          name = "sfdx";
+        };
     in rec {
       packages.sfdx = sfdx;
       packages.default = packages.sfdx;
