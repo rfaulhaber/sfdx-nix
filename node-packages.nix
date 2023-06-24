@@ -751,13 +751,13 @@ let
         sha512 = "je1x5wt2+BVcGuFvd6anodqSFQY68cDnSosAfxYCQfuQsknTNp+QorliATurpKfucOJ6yAKCxP8nxGjZzcAX0w==";
       };
     };
-    "@salesforce/packaging-2.1.6" = {
+    "@salesforce/packaging-2.1.7" = {
       name = "_at_salesforce_slash_packaging";
       packageName = "@salesforce/packaging";
-      version = "2.1.6";
+      version = "2.1.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@salesforce/packaging/-/packaging-2.1.6.tgz";
-        sha512 = "dyXsCHSAadfzqXxwY1FvRnsnZauMIVcpmztHsRlVu0KnNaU567pBud4TEGUyceTslrizNupwe16XUZjELiTgNg==";
+        url = "https://registry.npmjs.org/@salesforce/packaging/-/packaging-2.1.7.tgz";
+        sha512 = "f8owGbeE6PbDDDQzAKGtXHWUbVSW+9xjr8Uw2Wl0KGtNUE5/oj/UFOb5Q4+KyThnNxrD8I7HEA7TjfTn8Jkv2g==";
       };
     };
     "@salesforce/plugin-apex-2.3.3" = {
@@ -832,6 +832,15 @@ let
         sha512 = "X8f/SCCclszdIyJINZtRuV9Qf8aJOYBz2C1O50joPRfLIkKx5OV9w1YlwoNEYmnqye8+5HkarB0hecEZCkWREw==";
       };
     };
+    "@salesforce/plugin-login-1.2.11" = {
+      name = "_at_salesforce_slash_plugin-login";
+      packageName = "@salesforce/plugin-login";
+      version = "1.2.11";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@salesforce/plugin-login/-/plugin-login-1.2.11.tgz";
+        sha512 = "LbjFJQqTqU89XmbExEk9RPru1iAavZvBWd3BJUr3k7H/dYnSJcqjL0PR6hCuYlEpX96l/xAAV3iNasNp57v+mw==";
+      };
+    };
     "@salesforce/plugin-org-2.9.12" = {
       name = "_at_salesforce_slash_plugin-org";
       packageName = "@salesforce/plugin-org";
@@ -875,6 +884,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/@salesforce/plugin-signups/-/plugin-signups-1.4.22.tgz";
         sha512 = "MrqcpcKrLXRhatdAh8IhfoVQWISvEyItLBvpnlD+H3a/ErbG+6rEyCeXagSpC8ro1pu5au17E5asZrHiYMlTqA==";
+      };
+    };
+    "@salesforce/plugin-sobject-0.1.25" = {
+      name = "_at_salesforce_slash_plugin-sobject";
+      packageName = "@salesforce/plugin-sobject";
+      version = "0.1.25";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/@salesforce/plugin-sobject/-/plugin-sobject-0.1.25.tgz";
+        sha512 = "S10BP7Nsz88HemS65MIIJpqdwBYr0U8VW3O3LCpI9kAv+IQ2INcsLGzxa6mxIiiIWrDLUho62mZSleNXaFbSJA==";
       };
     };
     "@salesforce/plugin-source-2.10.15" = {
@@ -4126,13 +4144,13 @@ let
         sha512 = "6n4D8gLlLf1n5mNLQPRfViYzu9RATblzPEtm1SthMX1Pjao0r9YI9nw7ZIfRxQMERS87mcswrg+r/OYrPRX6jA==";
       };
     };
-    "jsforce-2.0.0-beta.25" = {
+    "jsforce-2.0.0-beta.27" = {
       name = "jsforce";
       packageName = "jsforce";
-      version = "2.0.0-beta.25";
+      version = "2.0.0-beta.27";
       src = fetchurl {
-        url = "https://registry.npmjs.org/jsforce/-/jsforce-2.0.0-beta.25.tgz";
-        sha512 = "ZtzwJErI4SSJYWrGAw0mHEHPZRB4Idz0RiXHakCtEgEjEWt6JIDR4sNbWRHUzWHdEO4O61z2YSBvdOuag1hkWg==";
+        url = "https://registry.npmjs.org/jsforce/-/jsforce-2.0.0-beta.27.tgz";
+        sha512 = "d9dDWWeHwayRKPo8FJBAIUyk8sNXGSHwdUjR6al3yK0YKci27Jc1XfNaQTxEAuymHQJVaCb1gxTKqmA4uznFdQ==";
       };
     };
     "json-buffer-3.0.1" = {
@@ -4693,13 +4711,13 @@ let
         sha512 = "sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==";
       };
     };
-    "minimatch-9.0.1" = {
+    "minimatch-9.0.2" = {
       name = "minimatch";
       packageName = "minimatch";
-      version = "9.0.1";
+      version = "9.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/minimatch/-/minimatch-9.0.1.tgz";
-        sha512 = "0jWhJpD/MdhPXwPuiRkCbfYfSKp2qnn2eOc279qI7f+osl/l+prKSrvhg157zSYvx/1nmgn2NqdT6k2Z7zSH9w==";
+        url = "https://registry.npmjs.org/minimatch/-/minimatch-9.0.2.tgz";
+        sha512 = "PZOT9g5v2ojiTL7r1xF6plNHLtOeTpSlDI007As2NlA2aYBMfVom17yqa6QzhmDP8QOhn7LjHTg7DFCVSSa6yg==";
       };
     };
     "minimist-1.2.8" = {
@@ -7623,7 +7641,7 @@ in
         ];
       })
       sources."@salesforce/kit-3.0.3"
-      (sources."@salesforce/packaging-2.1.6" // {
+      (sources."@salesforce/packaging-2.1.7" // {
         dependencies = [
           sources."@oclif/core-2.8.7"
           (sources."@salesforce/source-deploy-retrieve-8.6.0" // {
@@ -7814,7 +7832,7 @@ in
           sources."http-proxy-agent-5.0.0"
           sources."lru-cache-7.18.3"
           sources."make-fetch-happen-11.1.1"
-          sources."minimatch-9.0.1"
+          sources."minimatch-9.0.2"
           sources."minipass-fetch-3.0.3"
           sources."socks-proxy-agent-7.0.0"
           sources."ssri-10.0.4"
@@ -7845,7 +7863,7 @@ in
       sources."@tufjs/canonical-json-1.0.0"
       (sources."@tufjs/models-1.0.4" // {
         dependencies = [
-          sources."minimatch-9.0.1"
+          sources."minimatch-9.0.2"
         ];
       })
       sources."@types/cacheable-request-6.0.3"
@@ -8240,7 +8258,7 @@ in
       sources."js-tokens-4.0.0"
       sources."js-yaml-3.14.1"
       sources."js2xmlparser-4.0.2"
-      (sources."jsforce-2.0.0-beta.25" // {
+      (sources."jsforce-2.0.0-beta.27" // {
         dependencies = [
           sources."@types/node-12.20.55"
           sources."fs-extra-8.1.0"
@@ -8570,7 +8588,7 @@ in
         dependencies = [
           sources."glob-10.3.0"
           sources."json-parse-even-better-errors-3.0.0"
-          sources."minimatch-9.0.1"
+          sources."minimatch-9.0.2"
           sources."npm-normalize-package-bin-3.0.1"
         ];
       })
@@ -8645,7 +8663,7 @@ in
           sources."http-proxy-agent-5.0.0"
           sources."lru-cache-7.18.3"
           sources."make-fetch-happen-11.1.1"
-          sources."minimatch-9.0.1"
+          sources."minimatch-9.0.2"
           sources."minipass-fetch-3.0.3"
           sources."socks-proxy-agent-7.0.0"
           sources."ssri-10.0.4"
@@ -8738,7 +8756,7 @@ in
           sources."http-proxy-agent-5.0.0"
           sources."lru-cache-7.18.3"
           sources."make-fetch-happen-11.1.1"
-          sources."minimatch-9.0.1"
+          sources."minimatch-9.0.2"
           sources."minipass-fetch-3.0.3"
           sources."socks-proxy-agent-7.0.0"
           sources."ssri-10.0.4"
@@ -8833,7 +8851,7 @@ in
           sources."json-parse-even-better-errors-3.0.0"
           sources."lru-cache-7.18.3"
           sources."make-fetch-happen-11.1.1"
-          sources."minimatch-9.0.1"
+          sources."minimatch-9.0.2"
           sources."minipass-fetch-3.0.3"
           (sources."node-gyp-9.4.0" // {
             dependencies = [
@@ -8868,6 +8886,1371 @@ in
     meta = {
       description = "Salesforce CLI";
       homepage = "https://github.com/salesforcecli/sfdx-cli/";
+      license = "BSD-3-Clause";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
+  "@salesforce/cli" = nodeEnv.buildNodePackage {
+    name = "_at_salesforce_slash_cli";
+    packageName = "@salesforce/cli";
+    version = "1.83.4";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/@salesforce/cli/-/cli-1.83.4.tgz";
+      sha512 = "p59MtgmOek482rCwTztZL67QgG1o33BFC7x8jMYbubQfMg7sPVm7mSh+uJ7mNq8sshuKjGM1BoJV9joWyCVaZQ==";
+    };
+    dependencies = [
+      sources."@azure/abort-controller-1.1.0"
+      sources."@azure/core-auth-1.4.0"
+      (sources."@azure/core-rest-pipeline-1.10.1" // {
+        dependencies = [
+          sources."http-proxy-agent-5.0.0"
+        ];
+      })
+      sources."@azure/core-tracing-1.0.1"
+      sources."@azure/core-util-1.2.0"
+      sources."@azure/logger-1.0.4"
+      sources."@azure/opentelemetry-instrumentation-azure-sdk-1.0.0-beta.4"
+      sources."@babel/code-frame-7.22.5"
+      sources."@babel/helper-validator-identifier-7.22.5"
+      (sources."@babel/highlight-7.22.5" // {
+        dependencies = [
+          sources."ansi-styles-3.2.1"
+          sources."chalk-2.4.2"
+          sources."color-convert-1.9.3"
+          sources."color-name-1.1.3"
+          sources."escape-string-regexp-1.0.5"
+          sources."has-flag-3.0.0"
+          sources."supports-color-5.5.0"
+        ];
+      })
+      sources."@babel/runtime-7.22.5"
+      sources."@babel/runtime-corejs3-7.22.5"
+      sources."@colors/colors-1.5.0"
+      sources."@cspotcode/source-map-support-0.8.1"
+      sources."@gar/promisify-1.1.3"
+      (sources."@isaacs/cliui-8.0.2" // {
+        dependencies = [
+          sources."ansi-regex-6.0.1"
+          sources."ansi-styles-6.2.1"
+          sources."emoji-regex-9.2.2"
+          sources."string-width-5.1.2"
+          sources."strip-ansi-7.1.0"
+          sources."wrap-ansi-8.1.0"
+        ];
+      })
+      sources."@isaacs/string-locale-compare-1.1.0"
+      sources."@jridgewell/resolve-uri-3.1.1"
+      sources."@jridgewell/sourcemap-codec-1.4.15"
+      sources."@jridgewell/trace-mapping-0.3.9"
+      (sources."@mapbox/node-pre-gyp-1.0.10" // {
+        dependencies = [
+          sources."rimraf-3.0.2"
+        ];
+      })
+      sources."@microsoft/applicationinsights-web-snippet-1.0.1"
+      sources."@nodelib/fs.scandir-2.1.5"
+      sources."@nodelib/fs.stat-2.0.5"
+      sources."@nodelib/fs.walk-1.2.8"
+      (sources."@npmcli/arborist-4.3.1" // {
+        dependencies = [
+          sources."mkdirp-1.0.4"
+          sources."rimraf-3.0.2"
+        ];
+      })
+      sources."@npmcli/fs-1.1.1"
+      (sources."@npmcli/git-2.1.0" // {
+        dependencies = [
+          sources."lru-cache-6.0.0"
+          sources."mkdirp-1.0.4"
+          sources."which-2.0.2"
+        ];
+      })
+      sources."@npmcli/installed-package-contents-1.0.7"
+      (sources."@npmcli/map-workspaces-2.0.4" // {
+        dependencies = [
+          sources."glob-8.1.0"
+          sources."minimatch-5.1.6"
+        ];
+      })
+      sources."@npmcli/metavuln-calculator-2.0.0"
+      (sources."@npmcli/move-file-1.1.2" // {
+        dependencies = [
+          sources."mkdirp-1.0.4"
+          sources."rimraf-3.0.2"
+        ];
+      })
+      sources."@npmcli/name-from-folder-1.0.1"
+      sources."@npmcli/node-gyp-1.0.3"
+      sources."@npmcli/package-json-1.0.1"
+      sources."@npmcli/promise-spawn-1.3.2"
+      sources."@npmcli/run-script-2.0.0"
+      sources."@oclif/color-1.0.6"
+      sources."@oclif/core-2.8.6"
+      sources."@oclif/plugin-autocomplete-2.3.0"
+      sources."@oclif/plugin-commands-2.2.15"
+      sources."@oclif/plugin-help-5.2.9"
+      sources."@oclif/plugin-not-found-2.3.25"
+      sources."@oclif/plugin-plugins-3.1.2"
+      sources."@oclif/plugin-search-0.0.17"
+      (sources."@oclif/plugin-update-3.1.18" // {
+        dependencies = [
+          sources."cross-spawn-7.0.3"
+          sources."path-key-3.1.1"
+          sources."shebang-command-2.0.0"
+          sources."shebang-regex-3.0.0"
+          sources."which-2.0.2"
+        ];
+      })
+      sources."@oclif/plugin-version-1.3.4"
+      sources."@oclif/plugin-warn-if-update-available-2.0.37"
+      sources."@oclif/plugin-which-2.2.22"
+      sources."@octokit/auth-token-2.5.0"
+      sources."@octokit/core-3.6.0"
+      sources."@octokit/endpoint-6.0.12"
+      sources."@octokit/graphql-4.8.0"
+      sources."@octokit/openapi-types-12.11.0"
+      sources."@octokit/plugin-paginate-rest-2.21.3"
+      sources."@octokit/plugin-request-log-1.0.4"
+      sources."@octokit/plugin-rest-endpoint-methods-5.16.2"
+      sources."@octokit/request-5.6.3"
+      sources."@octokit/request-error-2.1.0"
+      sources."@octokit/rest-18.12.0"
+      sources."@octokit/types-6.41.0"
+      sources."@opentelemetry/api-1.4.1"
+      sources."@opentelemetry/core-1.14.0"
+      sources."@opentelemetry/instrumentation-0.40.0"
+      sources."@opentelemetry/resources-1.14.0"
+      sources."@opentelemetry/sdk-trace-base-1.14.0"
+      sources."@opentelemetry/semantic-conventions-1.14.0"
+      sources."@pkgjs/parseargs-0.11.0"
+      (sources."@salesforce/apex-node-1.6.2" // {
+        dependencies = [
+          sources."glob-8.1.0"
+          sources."minimatch-5.1.6"
+        ];
+      })
+      sources."@salesforce/bunyan-2.0.0"
+      (sources."@salesforce/core-4.3.1" // {
+        dependencies = [
+          sources."debug-3.2.7"
+        ];
+      })
+      sources."@salesforce/kit-3.0.3"
+      sources."@salesforce/plugin-apex-2.3.3"
+      (sources."@salesforce/plugin-auth-2.8.1" // {
+        dependencies = [
+          sources."open-8.4.2"
+        ];
+      })
+      (sources."@salesforce/plugin-data-2.3.24" // {
+        dependencies = [
+          sources."csv-stringify-6.4.0"
+        ];
+      })
+      (sources."@salesforce/plugin-deploy-retrieve-1.12.0" // {
+        dependencies = [
+          sources."fs-extra-10.1.0"
+        ];
+      })
+      (sources."@salesforce/plugin-info-2.6.20" // {
+        dependencies = [
+          sources."open-8.4.2"
+        ];
+      })
+      sources."@salesforce/plugin-limits-2.3.20"
+      (sources."@salesforce/plugin-login-1.2.11" // {
+        dependencies = [
+          sources."@salesforce/core-3.36.2"
+          sources."@salesforce/kit-1.9.2"
+          sources."@salesforce/sf-plugins-core-2.4.3"
+          sources."@salesforce/ts-types-1.7.3"
+          sources."debug-3.2.7"
+        ];
+      })
+      (sources."@salesforce/plugin-org-2.9.12" // {
+        dependencies = [
+          sources."open-8.4.2"
+        ];
+      })
+      sources."@salesforce/plugin-schema-2.3.13"
+      sources."@salesforce/plugin-settings-1.4.12"
+      sources."@salesforce/plugin-sobject-0.1.25"
+      sources."@salesforce/plugin-source-2.10.15"
+      sources."@salesforce/plugin-telemetry-2.2.1"
+      sources."@salesforce/plugin-templates-55.4.21"
+      (sources."@salesforce/plugin-trust-2.4.20" // {
+        dependencies = [
+          sources."@salesforce/core-3.36.2"
+          sources."@salesforce/kit-1.9.2"
+          sources."@salesforce/sf-plugins-core-2.4.3"
+          sources."@salesforce/ts-types-1.7.3"
+          sources."@tootallnate/once-1.1.2"
+          sources."data-uri-to-buffer-3.0.1"
+          sources."debug-3.2.7"
+          sources."degenerator-3.0.4"
+          sources."fs-extra-8.1.0"
+          (sources."get-uri-3.0.2" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          (sources."http-proxy-agent-4.0.1" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          sources."jsonfile-4.0.0"
+          sources."lru-cache-5.1.1"
+          sources."ms-2.1.2"
+          sources."npm-8.19.4"
+          (sources."pac-proxy-agent-5.0.0" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          sources."pac-resolver-5.0.1"
+          (sources."proxy-agent-5.0.0" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          (sources."socks-proxy-agent-5.0.1" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          sources."universalify-0.1.2"
+          sources."yallist-3.1.1"
+        ];
+      })
+      sources."@salesforce/plugin-user-2.3.17"
+      sources."@salesforce/schemas-1.5.1"
+      sources."@salesforce/sf-plugins-core-3.1.0"
+      (sources."@salesforce/source-deploy-retrieve-9.2.5" // {
+        dependencies = [
+          sources."minimatch-5.1.6"
+        ];
+      })
+      sources."@salesforce/source-tracking-4.2.1"
+      (sources."@salesforce/telemetry-3.2.29" // {
+        dependencies = [
+          sources."@salesforce/core-3.36.2"
+          sources."@salesforce/kit-1.9.2"
+          sources."@salesforce/ts-types-1.7.3"
+          sources."debug-3.2.7"
+        ];
+      })
+      (sources."@salesforce/templates-57.1.2" // {
+        dependencies = [
+          sources."@salesforce/core-3.36.2"
+          (sources."@salesforce/kit-1.9.2" // {
+            dependencies = [
+              sources."tslib-2.5.3"
+            ];
+          })
+          (sources."@salesforce/ts-types-1.7.3" // {
+            dependencies = [
+              sources."tslib-2.5.3"
+            ];
+          })
+          sources."@tootallnate/once-1.1.2"
+          sources."data-uri-to-buffer-3.0.1"
+          sources."debug-3.2.7"
+          sources."degenerator-3.0.4"
+          sources."fs-extra-8.1.0"
+          (sources."get-uri-3.0.2" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          (sources."http-proxy-agent-4.0.1" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          sources."jsonfile-4.0.0"
+          sources."lru-cache-5.1.1"
+          sources."ms-2.1.2"
+          (sources."pac-proxy-agent-5.0.0" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          sources."pac-resolver-5.0.1"
+          (sources."proxy-agent-5.0.0" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          (sources."socks-proxy-agent-5.0.1" // {
+            dependencies = [
+              sources."debug-4.3.4"
+            ];
+          })
+          sources."tslib-1.14.1"
+          sources."universalify-0.1.2"
+          sources."yallist-3.1.1"
+        ];
+      })
+      sources."@salesforce/ts-types-2.0.3"
+      sources."@sigstore/protobuf-specs-0.1.0"
+      (sources."@sigstore/tuf-1.0.0" // {
+        dependencies = [
+          sources."@npmcli/fs-3.1.0"
+          sources."cacache-17.1.3"
+          sources."fs-minipass-3.0.2"
+          sources."glob-10.3.0"
+          sources."http-proxy-agent-5.0.0"
+          sources."make-fetch-happen-11.1.1"
+          sources."minimatch-9.0.2"
+          sources."minipass-fetch-3.0.3"
+          sources."socks-proxy-agent-7.0.0"
+          sources."ssri-10.0.4"
+          sources."unique-filename-3.0.0"
+          sources."unique-slug-4.0.0"
+        ];
+      })
+      sources."@sindresorhus/is-4.6.0"
+      sources."@swc/core-1.3.66"
+      sources."@swc/core-darwin-arm64-1.3.66"
+      sources."@swc/core-darwin-x64-1.3.66"
+      sources."@swc/core-linux-arm-gnueabihf-1.3.66"
+      sources."@swc/core-linux-arm64-gnu-1.3.66"
+      sources."@swc/core-linux-arm64-musl-1.3.66"
+      sources."@swc/core-linux-x64-gnu-1.3.66"
+      sources."@swc/core-linux-x64-musl-1.3.66"
+      sources."@swc/core-win32-arm64-msvc-1.3.66"
+      sources."@swc/core-win32-ia32-msvc-1.3.66"
+      sources."@swc/core-win32-x64-msvc-1.3.66"
+      sources."@swc/helpers-0.5.1"
+      sources."@swc/wasm-1.3.66"
+      sources."@szmarczak/http-timer-4.0.6"
+      sources."@tootallnate/once-2.0.0"
+      sources."@tsconfig/node10-1.0.9"
+      sources."@tsconfig/node12-1.0.11"
+      sources."@tsconfig/node14-1.0.3"
+      sources."@tsconfig/node16-1.0.4"
+      sources."@tufjs/canonical-json-1.0.0"
+      (sources."@tufjs/models-1.0.4" // {
+        dependencies = [
+          sources."minimatch-9.0.2"
+        ];
+      })
+      sources."@types/cacheable-request-6.0.3"
+      sources."@types/cli-progress-3.11.0"
+      sources."@types/expect-1.20.4"
+      sources."@types/http-cache-semantics-4.0.1"
+      sources."@types/istanbul-lib-coverage-2.0.4"
+      sources."@types/istanbul-lib-report-3.0.0"
+      sources."@types/istanbul-reports-3.0.1"
+      sources."@types/keyv-3.1.4"
+      sources."@types/minimatch-3.0.5"
+      sources."@types/node-20.3.1"
+      sources."@types/normalize-package-data-2.4.1"
+      sources."@types/responselike-1.0.0"
+      sources."@types/semver-7.5.0"
+      sources."@types/shimmer-1.0.2"
+      sources."@types/vinyl-2.0.7"
+      sources."abbrev-1.1.1"
+      sources."abort-controller-3.0.0"
+      sources."acorn-8.9.0"
+      sources."acorn-walk-8.2.0"
+      sources."agent-base-6.0.2"
+      sources."agentkeepalive-4.3.0"
+      (sources."aggregate-error-3.1.0" // {
+        dependencies = [
+          sources."clean-stack-2.2.0"
+        ];
+      })
+      sources."ajv-8.12.0"
+      sources."ansi-escapes-4.3.2"
+      sources."ansi-regex-5.0.1"
+      sources."ansi-styles-4.3.0"
+      sources."ansicolors-0.3.2"
+      sources."applicationinsights-2.7.0"
+      sources."applicationinsights-native-metrics-0.0.9"
+      sources."aproba-2.0.0"
+      sources."archiver-5.3.1"
+      (sources."archiver-utils-2.1.0" // {
+        dependencies = [
+          sources."readable-stream-2.3.8"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
+      sources."are-we-there-yet-2.0.0"
+      sources."arg-4.1.3"
+      sources."argparse-1.0.10"
+      sources."array-differ-3.0.0"
+      sources."array-union-2.1.0"
+      sources."arrify-2.0.1"
+      sources."asap-2.0.6"
+      sources."ast-types-0.13.4"
+      sources."async-3.2.4"
+      sources."async-hook-jl-1.7.6"
+      (sources."async-listener-0.6.10" // {
+        dependencies = [
+          sources."semver-5.7.1"
+        ];
+      })
+      sources."async-lock-1.4.0"
+      sources."asynckit-0.4.0"
+      sources."at-least-node-1.0.0"
+      sources."axios-1.4.0"
+      sources."balanced-match-1.0.2"
+      sources."base64-js-1.5.1"
+      sources."base64url-3.0.1"
+      sources."basic-ftp-5.0.3"
+      sources."before-after-hook-2.2.3"
+      sources."big-integer-1.6.51"
+      (sources."bin-links-3.0.3" // {
+        dependencies = [
+          sources."npm-normalize-package-bin-2.0.0"
+          sources."rimraf-3.0.2"
+        ];
+      })
+      sources."binary-0.3.0"
+      sources."binaryextensions-4.18.0"
+      sources."bl-4.1.0"
+      sources."bluebird-3.4.7"
+      sources."brace-expansion-2.0.1"
+      sources."braces-3.0.2"
+      sources."buffer-5.7.1"
+      sources."buffer-crc32-0.2.13"
+      sources."buffer-equal-constant-time-1.0.1"
+      sources."buffer-indexof-polyfill-1.0.2"
+      sources."buffers-0.1.1"
+      sources."builtins-5.0.1"
+      sources."byline-5.0.0"
+      sources."bytes-3.1.2"
+      (sources."cacache-15.3.0" // {
+        dependencies = [
+          sources."chownr-2.0.0"
+          sources."lru-cache-6.0.0"
+          sources."minipass-3.3.6"
+          sources."mkdirp-1.0.4"
+          sources."rimraf-3.0.2"
+        ];
+      })
+      sources."cacheable-lookup-5.0.4"
+      sources."cacheable-request-7.0.4"
+      sources."camel-case-4.1.2"
+      sources."capital-case-1.0.4"
+      sources."cardinal-2.1.1"
+      sources."chainsaw-0.1.0"
+      (sources."chalk-4.1.2" // {
+        dependencies = [
+          sources."supports-color-7.2.0"
+        ];
+      })
+      sources."change-case-4.1.2"
+      sources."chardet-0.7.0"
+      sources."chownr-1.1.4"
+      sources."clean-git-ref-2.0.1"
+      sources."clean-stack-3.0.1"
+      sources."cli-cursor-3.1.0"
+      sources."cli-progress-3.12.0"
+      sources."cli-spinners-2.9.0"
+      sources."cli-table-0.3.11"
+      sources."cli-table3-0.6.3"
+      sources."cli-width-3.0.0"
+      sources."clone-1.0.4"
+      sources."clone-buffer-1.0.0"
+      sources."clone-response-1.0.3"
+      sources."clone-stats-1.0.0"
+      (sources."cloneable-readable-1.1.3" // {
+        dependencies = [
+          sources."readable-stream-2.3.8"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
+      (sources."cls-hooked-4.2.2" // {
+        dependencies = [
+          sources."semver-5.7.1"
+        ];
+      })
+      sources."cmd-shim-5.0.0"
+      sources."color-convert-2.0.1"
+      sources."color-name-1.1.4"
+      sources."color-support-1.1.3"
+      sources."colors-1.0.3"
+      sources."combined-stream-1.0.8"
+      sources."commander-4.1.1"
+      sources."common-ancestor-path-1.0.1"
+      sources."commondir-1.0.1"
+      sources."compress-commons-4.1.1"
+      sources."concat-map-0.0.1"
+      sources."console-control-strings-1.1.0"
+      sources."constant-case-3.0.4"
+      sources."content-type-1.0.5"
+      sources."continuation-local-storage-3.2.1"
+      sources."core-js-3.31.0"
+      sources."core-js-pure-3.31.0"
+      sources."core-util-is-1.0.3"
+      sources."crc-32-1.2.2"
+      sources."crc32-stream-4.0.2"
+      sources."create-require-1.1.1"
+      (sources."cross-spawn-6.0.5" // {
+        dependencies = [
+          sources."semver-5.7.1"
+        ];
+      })
+      sources."csprng-0.1.2"
+      sources."csv-parse-4.16.3"
+      sources."csv-stringify-5.6.5"
+      sources."dargs-7.0.0"
+      sources."data-uri-to-buffer-5.0.1"
+      sources."dateformat-4.6.3"
+      sources."dayjs-1.11.8"
+      sources."dayjs-plugin-utc-0.1.2"
+      (sources."debug-4.3.4" // {
+        dependencies = [
+          sources."ms-2.1.2"
+        ];
+      })
+      sources."debuglog-1.0.1"
+      (sources."decompress-response-6.0.0" // {
+        dependencies = [
+          sources."mimic-response-3.1.0"
+        ];
+      })
+      sources."deep-extend-0.6.0"
+      sources."deep-is-0.1.4"
+      sources."defaults-1.0.4"
+      sources."defer-to-connect-2.0.1"
+      sources."define-lazy-prop-2.0.0"
+      sources."degenerator-4.0.3"
+      sources."delayed-stream-1.0.0"
+      sources."delegates-1.0.0"
+      sources."depd-2.0.0"
+      sources."deprecation-2.3.1"
+      sources."detect-libc-2.0.1"
+      sources."dezalgo-1.0.4"
+      (sources."diagnostic-channel-1.1.0" // {
+        dependencies = [
+          sources."semver-5.7.1"
+        ];
+      })
+      sources."diagnostic-channel-publishers-1.0.6"
+      sources."diff-4.0.2"
+      sources."diff3-0.0.3"
+      sources."dir-glob-3.0.1"
+      sources."dot-case-3.0.4"
+      (sources."duplexer2-0.1.4" // {
+        dependencies = [
+          sources."readable-stream-2.3.8"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
+      sources."eastasianwidth-0.2.0"
+      sources."ecdsa-sig-formatter-1.0.11"
+      sources."ejs-3.1.9"
+      sources."emitter-listener-1.1.2"
+      sources."emoji-regex-8.0.0"
+      (sources."encoding-0.1.13" // {
+        dependencies = [
+          sources."iconv-lite-0.6.3"
+        ];
+      })
+      sources."end-of-stream-1.4.4"
+      sources."env-paths-2.2.1"
+      sources."err-code-2.0.3"
+      sources."error-10.4.0"
+      sources."error-ex-1.3.2"
+      sources."escape-string-regexp-4.0.0"
+      sources."escodegen-1.14.3"
+      sources."esprima-4.0.1"
+      sources."estraverse-4.3.0"
+      sources."esutils-2.0.3"
+      sources."event-target-shim-5.0.1"
+      sources."eventemitter3-4.0.7"
+      sources."events-3.3.0"
+      (sources."execa-5.1.1" // {
+        dependencies = [
+          sources."cross-spawn-7.0.3"
+          sources."get-stream-6.0.1"
+          sources."path-key-3.1.1"
+          sources."shebang-command-2.0.0"
+          sources."shebang-regex-3.0.0"
+          sources."which-2.0.2"
+        ];
+      })
+      sources."exponential-backoff-3.1.1"
+      sources."external-editor-3.1.0"
+      sources."fast-deep-equal-3.1.3"
+      sources."fast-glob-3.2.12"
+      sources."fast-levenshtein-3.0.0"
+      sources."fast-xml-parser-4.2.5"
+      sources."fastest-levenshtein-1.0.16"
+      sources."fastq-1.15.0"
+      sources."faye-1.4.0"
+      sources."faye-websocket-0.11.4"
+      (sources."figures-3.2.0" // {
+        dependencies = [
+          sources."escape-string-regexp-1.0.5"
+        ];
+      })
+      sources."file-uri-to-path-2.0.0"
+      (sources."filelist-1.0.4" // {
+        dependencies = [
+          sources."minimatch-5.1.6"
+        ];
+      })
+      sources."filesize-6.4.0"
+      sources."fill-range-7.0.1"
+      sources."find-up-5.0.0"
+      sources."find-yarn-workspace-root2-1.2.16"
+      (sources."first-chunk-stream-2.0.0" // {
+        dependencies = [
+          sources."readable-stream-2.3.8"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
+      sources."follow-redirects-1.15.2"
+      (sources."foreground-child-3.1.1" // {
+        dependencies = [
+          sources."cross-spawn-7.0.3"
+          sources."path-key-3.1.1"
+          sources."shebang-command-2.0.0"
+          sources."shebang-regex-3.0.0"
+          sources."signal-exit-4.0.2"
+          sources."which-2.0.2"
+        ];
+      })
+      sources."form-data-4.0.0"
+      sources."fs-constants-1.0.0"
+      sources."fs-extra-9.1.0"
+      (sources."fs-minipass-2.1.0" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      sources."fs.realpath-1.0.0"
+      sources."fstream-1.0.12"
+      (sources."ftp-0.3.10" // {
+        dependencies = [
+          sources."isarray-0.0.1"
+          sources."readable-stream-1.1.14"
+          sources."string_decoder-0.10.31"
+        ];
+      })
+      sources."function-bind-1.1.1"
+      sources."fuse.js-6.6.2"
+      sources."gauge-3.0.2"
+      sources."get-package-type-0.1.0"
+      sources."get-stream-5.2.0"
+      (sources."get-uri-6.0.1" // {
+        dependencies = [
+          sources."fs-extra-8.1.0"
+          sources."jsonfile-4.0.0"
+          sources."universalify-0.1.2"
+        ];
+      })
+      sources."github-username-6.0.0"
+      sources."glob-7.2.3"
+      sources."glob-parent-5.1.2"
+      sources."globby-11.1.0"
+      sources."got-11.8.6"
+      sources."graceful-fs-4.2.11"
+      sources."grouped-queue-2.0.0"
+      sources."has-1.0.3"
+      sources."has-flag-4.0.0"
+      sources."has-unicode-2.0.1"
+      sources."header-case-2.0.4"
+      (sources."hosted-git-info-4.1.0" // {
+        dependencies = [
+          sources."lru-cache-6.0.0"
+        ];
+      })
+      sources."html-escaper-2.0.2"
+      sources."http-cache-semantics-4.1.1"
+      sources."http-call-5.3.0"
+      sources."http-errors-2.0.0"
+      sources."http-parser-js-0.5.8"
+      (sources."http-proxy-agent-7.0.0" // {
+        dependencies = [
+          sources."agent-base-7.1.0"
+        ];
+      })
+      sources."http2-wrapper-1.0.3"
+      sources."https-proxy-agent-5.0.1"
+      sources."human-signals-2.1.0"
+      sources."humanize-ms-1.2.1"
+      sources."hyperlinker-1.0.0"
+      sources."iconv-lite-0.4.24"
+      sources."ieee754-1.2.1"
+      sources."ignore-5.2.4"
+      sources."ignore-walk-4.0.1"
+      sources."immediate-3.0.6"
+      sources."import-in-the-middle-1.3.5"
+      sources."imurmurhash-0.1.4"
+      sources."indent-string-4.0.0"
+      sources."infer-owner-1.0.4"
+      sources."inflight-1.0.6"
+      sources."inherits-2.0.4"
+      sources."inquirer-8.2.5"
+      sources."interpret-1.4.0"
+      sources."ip-1.1.8"
+      sources."is-arrayish-0.2.1"
+      sources."is-core-module-2.12.1"
+      sources."is-docker-2.2.1"
+      sources."is-extglob-2.1.1"
+      sources."is-fullwidth-code-point-3.0.0"
+      sources."is-glob-4.0.3"
+      sources."is-interactive-1.0.0"
+      sources."is-lambda-1.0.1"
+      sources."is-number-7.0.0"
+      sources."is-plain-obj-2.1.0"
+      sources."is-plain-object-5.0.0"
+      sources."is-retry-allowed-1.2.0"
+      sources."is-scoped-2.1.0"
+      sources."is-stream-2.0.1"
+      sources."is-unicode-supported-0.1.0"
+      sources."is-utf8-0.2.1"
+      sources."is-wsl-2.2.0"
+      sources."isarray-1.0.0"
+      sources."isbinaryfile-4.0.10"
+      sources."isexe-2.0.0"
+      sources."isomorphic-git-1.23.0"
+      sources."istanbul-lib-coverage-3.2.0"
+      (sources."istanbul-lib-report-3.0.0" // {
+        dependencies = [
+          sources."supports-color-7.2.0"
+        ];
+      })
+      sources."istanbul-reports-3.1.5"
+      sources."jackspeak-2.2.1"
+      sources."jake-10.8.7"
+      sources."js-tokens-4.0.0"
+      sources."js-yaml-3.14.1"
+      sources."js2xmlparser-4.0.2"
+      (sources."jsforce-2.0.0-beta.27" // {
+        dependencies = [
+          sources."@types/node-12.20.55"
+          sources."fs-extra-8.1.0"
+          sources."inquirer-7.3.3"
+          sources."jsonfile-4.0.0"
+          sources."rxjs-6.6.7"
+          sources."tslib-1.14.1"
+          sources."universalify-0.1.2"
+        ];
+      })
+      sources."json-buffer-3.0.1"
+      sources."json-parse-better-errors-1.0.2"
+      sources."json-parse-even-better-errors-2.3.1"
+      sources."json-schema-traverse-1.0.0"
+      sources."json-stringify-nice-1.1.4"
+      sources."jsonfile-6.1.0"
+      sources."jsonparse-1.3.1"
+      sources."jsonwebtoken-9.0.0"
+      (sources."jszip-3.10.1" // {
+        dependencies = [
+          sources."readable-stream-2.3.8"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
+      sources."just-diff-5.2.0"
+      sources."just-diff-apply-5.5.0"
+      sources."jwa-1.4.1"
+      sources."jws-3.2.2"
+      sources."keyv-4.5.2"
+      (sources."lazystream-1.0.1" // {
+        dependencies = [
+          sources."readable-stream-2.3.8"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
+      sources."levn-0.3.0"
+      sources."lie-3.3.0"
+      sources."lines-and-columns-1.2.4"
+      sources."listenercount-1.0.1"
+      (sources."load-json-file-5.3.0" // {
+        dependencies = [
+          sources."type-fest-0.3.1"
+        ];
+      })
+      sources."load-yaml-file-0.2.0"
+      sources."locate-path-6.0.0"
+      sources."lodash-4.17.21"
+      sources."lodash.defaults-4.2.0"
+      sources."lodash.difference-4.5.0"
+      sources."lodash.flatten-4.4.0"
+      sources."lodash.isplainobject-4.0.6"
+      sources."lodash.throttle-4.1.1"
+      sources."lodash.union-4.6.0"
+      sources."log-chopper-1.0.2"
+      sources."log-symbols-4.1.0"
+      sources."lower-case-2.0.2"
+      sources."lowercase-keys-2.0.0"
+      sources."lru-cache-7.18.3"
+      (sources."make-dir-3.1.0" // {
+        dependencies = [
+          sources."semver-6.3.0"
+        ];
+      })
+      sources."make-error-1.3.6"
+      (sources."make-fetch-happen-9.1.0" // {
+        dependencies = [
+          sources."@tootallnate/once-1.1.2"
+          sources."http-proxy-agent-4.0.1"
+          sources."lru-cache-6.0.0"
+          sources."minipass-3.3.6"
+          sources."socks-proxy-agent-6.2.1"
+        ];
+      })
+      sources."marked-4.3.0"
+      (sources."marked-terminal-4.2.0" // {
+        dependencies = [
+          sources."marked-2.1.3"
+        ];
+      })
+      (sources."mem-fs-2.3.0" // {
+        dependencies = [
+          sources."@types/node-15.14.9"
+        ];
+      })
+      (sources."mem-fs-editor-9.7.0" // {
+        dependencies = [
+          sources."isbinaryfile-5.0.0"
+          sources."minimatch-7.4.6"
+        ];
+      })
+      sources."merge-stream-2.0.0"
+      sources."merge2-1.4.1"
+      sources."micromatch-4.0.5"
+      sources."mime-2.6.0"
+      sources."mime-db-1.52.0"
+      sources."mime-types-2.1.35"
+      sources."mimic-fn-2.1.0"
+      sources."mimic-response-1.0.1"
+      (sources."minimatch-3.1.2" // {
+        dependencies = [
+          sources."brace-expansion-1.1.11"
+        ];
+      })
+      sources."minimist-1.2.8"
+      sources."minimisted-2.0.1"
+      sources."minipass-5.0.0"
+      (sources."minipass-collect-1.0.2" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      (sources."minipass-fetch-1.4.1" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      (sources."minipass-flush-1.0.5" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      (sources."minipass-json-stream-1.0.1" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      (sources."minipass-pipeline-1.2.4" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      (sources."minipass-sized-1.0.3" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      (sources."minizlib-2.1.2" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      sources."mkdirp-0.5.6"
+      sources."mkdirp-classic-0.5.3"
+      (sources."mkdirp-infer-owner-2.0.0" // {
+        dependencies = [
+          sources."chownr-2.0.0"
+          sources."mkdirp-1.0.4"
+        ];
+      })
+      sources."module-details-from-path-1.0.3"
+      sources."ms-2.1.3"
+      sources."multimatch-5.0.0"
+      sources."multistream-3.1.0"
+      sources."mute-stream-0.0.8"
+      sources."nan-2.17.0"
+      sources."natural-orderby-2.0.3"
+      sources."negotiator-0.6.3"
+      sources."netmask-2.0.2"
+      sources."nice-try-1.0.5"
+      sources."no-case-3.0.4"
+      sources."node-emoji-1.11.0"
+      sources."node-fetch-2.6.11"
+      (sources."node-gyp-8.4.1" // {
+        dependencies = [
+          sources."are-we-there-yet-3.0.1"
+          sources."gauge-4.0.4"
+          sources."npmlog-6.0.2"
+          sources."rimraf-3.0.2"
+          sources."which-2.0.2"
+        ];
+      })
+      sources."nopt-5.0.0"
+      (sources."normalize-package-data-5.0.0" // {
+        dependencies = [
+          sources."hosted-git-info-6.1.1"
+        ];
+      })
+      sources."normalize-path-3.0.0"
+      sources."normalize-url-6.1.0"
+      sources."npm-9.7.2"
+      sources."npm-bundled-1.1.2"
+      sources."npm-install-checks-4.0.0"
+      sources."npm-normalize-package-bin-1.0.1"
+      (sources."npm-package-arg-8.1.5" // {
+        dependencies = [
+          sources."builtins-1.0.3"
+          sources."validate-npm-package-name-3.0.0"
+        ];
+      })
+      sources."npm-packlist-3.0.0"
+      sources."npm-pick-manifest-6.1.1"
+      (sources."npm-registry-fetch-12.0.2" // {
+        dependencies = [
+          sources."@npmcli/fs-2.1.2"
+          sources."@npmcli/move-file-2.0.1"
+          sources."brace-expansion-1.1.11"
+          sources."cacache-16.1.3"
+          sources."chownr-2.0.0"
+          sources."glob-8.1.0"
+          sources."http-proxy-agent-5.0.0"
+          (sources."make-fetch-happen-10.2.1" // {
+            dependencies = [
+              sources."minipass-fetch-2.1.2"
+            ];
+          })
+          sources."minimatch-5.1.6"
+          sources."minipass-3.3.6"
+          sources."mkdirp-1.0.4"
+          (sources."rimraf-3.0.2" // {
+            dependencies = [
+              sources."glob-7.2.3"
+              sources."minimatch-3.1.2"
+            ];
+          })
+          sources."socks-proxy-agent-7.0.0"
+          sources."ssri-9.0.1"
+          sources."unique-filename-2.0.1"
+          sources."unique-slug-3.0.0"
+        ];
+      })
+      (sources."npm-run-path-4.0.1" // {
+        dependencies = [
+          sources."path-key-3.1.1"
+        ];
+      })
+      sources."npmlog-5.0.1"
+      sources."object-assign-4.1.1"
+      sources."object-treeify-1.1.33"
+      sources."once-1.4.0"
+      sources."onetime-5.1.2"
+      sources."open-7.4.2"
+      (sources."optionator-0.8.3" // {
+        dependencies = [
+          sources."fast-levenshtein-2.0.6"
+        ];
+      })
+      sources."ora-5.4.1"
+      sources."os-tmpdir-1.0.2"
+      sources."p-cancelable-2.1.1"
+      sources."p-finally-1.0.0"
+      sources."p-limit-3.1.0"
+      sources."p-locate-5.0.0"
+      sources."p-map-4.0.0"
+      sources."p-queue-6.6.2"
+      sources."p-timeout-3.2.0"
+      sources."p-transform-1.3.0"
+      sources."p-try-2.2.0"
+      (sources."pac-proxy-agent-6.0.3" // {
+        dependencies = [
+          sources."agent-base-7.1.0"
+          sources."https-proxy-agent-7.0.0"
+        ];
+      })
+      sources."pac-resolver-6.0.1"
+      (sources."pacote-12.0.3" // {
+        dependencies = [
+          sources."chownr-2.0.0"
+          sources."minipass-3.3.6"
+          sources."mkdirp-1.0.4"
+          sources."rimraf-3.0.2"
+        ];
+      })
+      sources."pako-1.0.11"
+      sources."param-case-3.0.4"
+      sources."parse-conflict-json-2.0.2"
+      sources."parse-json-4.0.0"
+      sources."pascal-case-3.1.2"
+      (sources."password-prompt-1.1.2" // {
+        dependencies = [
+          sources."ansi-escapes-3.2.0"
+        ];
+      })
+      sources."path-case-3.0.4"
+      sources."path-exists-4.0.0"
+      sources."path-is-absolute-1.0.1"
+      sources."path-key-2.0.1"
+      sources."path-parse-1.0.7"
+      (sources."path-scurry-1.9.2" // {
+        dependencies = [
+          sources."lru-cache-9.1.2"
+        ];
+      })
+      sources."path-type-4.0.0"
+      sources."picomatch-2.3.1"
+      sources."pify-4.0.1"
+      (sources."pkg-dir-4.2.0" // {
+        dependencies = [
+          sources."find-up-4.1.0"
+          sources."locate-path-5.0.0"
+          sources."p-limit-2.3.0"
+          sources."p-locate-4.1.0"
+        ];
+      })
+      sources."preferred-pm-3.0.3"
+      sources."prelude-ls-1.1.2"
+      sources."pretty-bytes-5.6.0"
+      sources."proc-log-1.0.0"
+      sources."process-0.11.10"
+      sources."process-nextick-args-2.0.1"
+      sources."promise-all-reject-late-1.0.1"
+      sources."promise-call-limit-1.0.2"
+      sources."promise-inflight-1.0.1"
+      sources."promise-retry-2.0.1"
+      sources."proper-lockfile-4.1.2"
+      (sources."proxy-agent-6.2.1" // {
+        dependencies = [
+          sources."agent-base-7.1.0"
+          sources."https-proxy-agent-7.0.0"
+        ];
+      })
+      sources."proxy-from-env-1.1.0"
+      sources."psl-1.9.0"
+      sources."pump-3.0.0"
+      sources."punycode-2.3.0"
+      sources."querystringify-2.2.0"
+      sources."queue-microtask-1.2.3"
+      sources."quick-lru-5.1.1"
+      sources."raw-body-2.5.2"
+      sources."read-cmd-shim-3.0.1"
+      (sources."read-package-json-6.0.4" // {
+        dependencies = [
+          sources."glob-10.3.0"
+          sources."json-parse-even-better-errors-3.0.0"
+          sources."minimatch-9.0.2"
+          sources."npm-normalize-package-bin-3.0.1"
+        ];
+      })
+      sources."read-package-json-fast-2.0.3"
+      (sources."read-pkg-5.2.0" // {
+        dependencies = [
+          sources."hosted-git-info-2.8.9"
+          sources."normalize-package-data-2.5.0"
+          sources."parse-json-5.2.0"
+          sources."semver-5.7.1"
+          sources."type-fest-0.6.0"
+        ];
+      })
+      (sources."read-pkg-up-7.0.1" // {
+        dependencies = [
+          sources."find-up-4.1.0"
+          sources."locate-path-5.0.0"
+          sources."p-limit-2.3.0"
+          sources."p-locate-4.1.0"
+          sources."type-fest-0.8.1"
+        ];
+      })
+      sources."readable-stream-3.6.2"
+      (sources."readdir-glob-1.1.3" // {
+        dependencies = [
+          sources."minimatch-5.1.6"
+        ];
+      })
+      sources."readdir-scoped-modules-1.1.0"
+      sources."rechoir-0.6.2"
+      sources."redeyed-2.1.1"
+      sources."regenerator-runtime-0.13.11"
+      sources."remove-trailing-separator-1.1.0"
+      sources."replace-ext-1.0.1"
+      sources."require-from-string-2.0.2"
+      sources."require-in-the-middle-7.1.1"
+      sources."requires-port-1.0.0"
+      sources."resolve-1.22.3"
+      sources."resolve-alpn-1.2.1"
+      sources."responselike-2.0.1"
+      sources."restore-cursor-3.1.0"
+      sources."retry-0.12.0"
+      sources."reusify-1.0.4"
+      sources."rimraf-2.7.1"
+      sources."run-async-2.4.1"
+      sources."run-parallel-1.2.0"
+      sources."rxjs-7.8.1"
+      sources."safe-buffer-5.2.1"
+      sources."safer-buffer-2.1.2"
+      sources."sax-1.2.4"
+      sources."scoped-regex-2.1.0"
+      (sources."semver-7.5.3" // {
+        dependencies = [
+          sources."lru-cache-6.0.0"
+        ];
+      })
+      sources."sentence-case-3.0.4"
+      sources."sequin-0.1.1"
+      sources."set-blocking-2.0.0"
+      sources."setimmediate-1.0.5"
+      sources."setprototypeof-1.2.0"
+      sources."sha.js-2.4.11"
+      sources."shebang-command-1.2.0"
+      sources."shebang-regex-1.0.0"
+      sources."shelljs-0.8.5"
+      sources."shimmer-1.2.1"
+      sources."shx-0.3.4"
+      sources."signal-exit-3.0.7"
+      (sources."sigstore-1.6.0" // {
+        dependencies = [
+          sources."@npmcli/fs-3.1.0"
+          sources."cacache-17.1.3"
+          sources."fs-minipass-3.0.2"
+          sources."glob-10.3.0"
+          sources."http-proxy-agent-5.0.0"
+          sources."make-fetch-happen-11.1.1"
+          sources."minimatch-9.0.2"
+          sources."minipass-fetch-3.0.3"
+          sources."socks-proxy-agent-7.0.0"
+          sources."ssri-10.0.4"
+          sources."unique-filename-3.0.0"
+          sources."unique-slug-4.0.0"
+        ];
+      })
+      sources."simple-concat-1.0.1"
+      sources."simple-get-4.0.1"
+      sources."slash-3.0.0"
+      sources."smart-buffer-4.2.0"
+      sources."snake-case-3.0.4"
+      (sources."socks-2.7.1" // {
+        dependencies = [
+          sources."ip-2.0.0"
+        ];
+      })
+      (sources."socks-proxy-agent-8.0.1" // {
+        dependencies = [
+          sources."agent-base-7.1.0"
+        ];
+      })
+      sources."sort-keys-4.2.0"
+      sources."source-map-0.6.1"
+      sources."spdx-correct-3.2.0"
+      sources."spdx-exceptions-2.3.0"
+      sources."spdx-expression-parse-3.0.1"
+      sources."spdx-license-ids-3.0.13"
+      sources."sprintf-js-1.0.3"
+      (sources."ssri-8.0.1" // {
+        dependencies = [
+          sources."minipass-3.3.6"
+        ];
+      })
+      sources."stack-chain-1.3.7"
+      sources."statuses-2.0.1"
+      sources."string-width-4.2.3"
+      sources."string-width-cjs-4.2.3"
+      sources."string_decoder-1.3.0"
+      sources."strip-ansi-6.0.1"
+      sources."strip-ansi-cjs-6.0.1"
+      sources."strip-bom-3.0.0"
+      sources."strip-bom-buf-1.0.0"
+      (sources."strip-bom-stream-2.0.0" // {
+        dependencies = [
+          sources."strip-bom-2.0.0"
+        ];
+      })
+      sources."strip-final-newline-2.0.0"
+      sources."strnum-1.0.5"
+      sources."supports-color-8.1.1"
+      (sources."supports-hyperlinks-2.3.0" // {
+        dependencies = [
+          sources."supports-color-7.2.0"
+        ];
+      })
+      sources."supports-preserve-symlinks-flag-1.0.0"
+      (sources."tar-6.1.15" // {
+        dependencies = [
+          sources."chownr-2.0.0"
+          sources."mkdirp-1.0.4"
+        ];
+      })
+      sources."tar-fs-2.1.1"
+      sources."tar-stream-2.2.0"
+      sources."text-table-0.2.0"
+      sources."textextensions-5.16.0"
+      sources."through-2.3.8"
+      sources."tmp-0.0.33"
+      sources."to-regex-range-5.0.1"
+      sources."toidentifier-1.0.1"
+      (sources."tough-cookie-4.1.3" // {
+        dependencies = [
+          sources."universalify-0.2.0"
+        ];
+      })
+      sources."tr46-0.0.3"
+      sources."traverse-0.3.9"
+      sources."treeverse-1.0.4"
+      sources."ts-node-10.9.1"
+      sources."ts-retry-promise-0.7.0"
+      sources."tslib-2.5.3"
+      (sources."tuf-js-1.1.7" // {
+        dependencies = [
+          sources."@npmcli/fs-3.1.0"
+          sources."cacache-17.1.3"
+          sources."fs-minipass-3.0.2"
+          sources."glob-10.3.0"
+          sources."http-proxy-agent-5.0.0"
+          sources."make-fetch-happen-11.1.1"
+          sources."minimatch-9.0.2"
+          sources."minipass-fetch-3.0.3"
+          sources."socks-proxy-agent-7.0.0"
+          sources."ssri-10.0.4"
+          sources."unique-filename-3.0.0"
+          sources."unique-slug-4.0.0"
+        ];
+      })
+      sources."tunnel-agent-0.6.0"
+      sources."type-check-0.3.2"
+      sources."type-fest-0.21.3"
+      sources."typescript-5.1.3"
+      sources."unique-filename-1.1.1"
+      sources."unique-slug-2.0.2"
+      sources."universal-user-agent-6.0.0"
+      sources."universalify-2.0.0"
+      sources."unpipe-1.0.0"
+      sources."untildify-4.0.0"
+      (sources."unzipper-0.10.14" // {
+        dependencies = [
+          sources."readable-stream-2.3.8"
+          sources."safe-buffer-5.1.2"
+          sources."string_decoder-1.1.1"
+        ];
+      })
+      sources."upper-case-2.0.2"
+      sources."upper-case-first-2.0.2"
+      sources."uri-js-4.4.1"
+      sources."url-parse-1.5.10"
+      sources."util-deprecate-1.0.2"
+      sources."uuid-8.3.2"
+      sources."v8-compile-cache-lib-3.0.1"
+      sources."validate-npm-package-license-3.0.4"
+      sources."validate-npm-package-name-5.0.0"
+      (sources."vinyl-2.2.1" // {
+        dependencies = [
+          sources."clone-2.1.2"
+        ];
+      })
+      (sources."vinyl-file-3.0.0" // {
+        dependencies = [
+          sources."pify-2.3.0"
+        ];
+      })
+      sources."vm2-3.9.19"
+      sources."walk-up-path-1.0.0"
+      sources."wcwidth-1.0.1"
+      sources."webidl-conversions-3.0.1"
+      sources."websocket-driver-0.7.4"
+      sources."websocket-extensions-0.1.4"
+      sources."whatwg-url-5.0.0"
+      sources."which-1.3.1"
+      sources."which-pm-2.0.0"
+      sources."wide-align-1.1.5"
+      sources."widest-line-3.1.0"
+      sources."word-wrap-1.2.3"
+      sources."wordwrap-1.0.0"
+      sources."wrap-ansi-7.0.0"
+      sources."wrap-ansi-cjs-7.0.0"
+      sources."wrappy-1.0.2"
+      sources."write-file-atomic-4.0.2"
+      sources."xml2js-0.5.0"
+      sources."xmlbuilder-11.0.1"
+      sources."xmlcreate-2.0.4"
+      sources."xregexp-2.0.0"
+      sources."yallist-4.0.0"
+      sources."yarn-1.22.19"
+      (sources."yeoman-environment-3.19.3" // {
+        dependencies = [
+          sources."buffer-6.0.3"
+          sources."commander-7.1.0"
+          sources."diff-5.1.0"
+          sources."readable-stream-4.4.0"
+        ];
+      })
+      (sources."yeoman-generator-5.9.0" // {
+        dependencies = [
+          sources."@npmcli/fs-3.1.0"
+          sources."@npmcli/git-4.1.0"
+          sources."@npmcli/installed-package-contents-2.0.2"
+          sources."@npmcli/node-gyp-3.0.0"
+          sources."@npmcli/promise-spawn-6.0.2"
+          sources."@npmcli/run-script-6.0.2"
+          sources."are-we-there-yet-3.0.1"
+          sources."cacache-17.1.3"
+          sources."fs-minipass-3.0.2"
+          sources."gauge-4.0.4"
+          sources."glob-10.3.0"
+          sources."hosted-git-info-6.1.1"
+          sources."http-proxy-agent-5.0.0"
+          sources."ignore-walk-6.0.3"
+          sources."json-parse-even-better-errors-3.0.0"
+          sources."make-fetch-happen-11.1.1"
+          sources."minimatch-9.0.2"
+          sources."minipass-fetch-3.0.3"
+          (sources."node-gyp-9.4.0" // {
+            dependencies = [
+              sources."which-2.0.2"
+            ];
+          })
+          sources."nopt-6.0.0"
+          sources."npm-bundled-3.0.0"
+          sources."npm-install-checks-6.1.1"
+          sources."npm-normalize-package-bin-3.0.1"
+          sources."npm-package-arg-10.1.0"
+          sources."npm-packlist-7.0.4"
+          sources."npm-pick-manifest-8.0.1"
+          sources."npm-registry-fetch-14.0.5"
+          sources."npmlog-6.0.2"
+          sources."pacote-15.2.0"
+          sources."proc-log-3.0.0"
+          sources."read-package-json-fast-3.0.2"
+          sources."rimraf-3.0.2"
+          sources."socks-proxy-agent-7.0.0"
+          sources."ssri-10.0.4"
+          sources."unique-filename-3.0.0"
+          sources."unique-slug-4.0.0"
+          sources."which-3.0.1"
+        ];
+      })
+      sources."yn-3.1.1"
+      sources."yocto-queue-0.1.0"
+      sources."zip-stream-4.1.0"
+    ];
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "The Salesforce CLI";
+      homepage = "https://github.com/salesforcecli/cli";
       license = "BSD-3-Clause";
     };
     production = true;

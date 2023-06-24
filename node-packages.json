@@ -1,1 +1,4 @@
-["sfdx-cli"]
+[
+    "sfdx-cli",
+    "@salesforce/cli"
+]

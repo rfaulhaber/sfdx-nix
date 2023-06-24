@@ -13,21 +13,28 @@
   }:
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
-      sfdx =
+      nodePackages =
         (pkgs.callPackage ./default.nix {
           inherit pkgs system;
           nodejs = pkgs.nodejs_20;
-        })
-        .sfdx-cli
-        // {
-          # we have to override the package name so nix can find the right executable
-          pname = "sfdx";
-          name = "sfdx";
-        };
+        });
+      sfdx = pkgs.stdenv.mkDerivation {
+        name = "sfdx";
+        pname = "sfdx";
+        src = nodePackages.sfdx-cli.src;
+        version = nodePackages.sfdx-cli.version;
+      };
+      sf = pkgs.stdenv.mkDerivation {
+        name = "sf";
+        pname = "sf";
+        src = nodePackages."@salesforce/cli".src;
+        version = nodePackages."@salesforce/cli".version;
+      };
     in rec {
       packages.sfdx = sfdx;
-      packages.default = packages.sfdx;
+      packages.sf = sf;
+      # packages.default = packages.sf;
       devShells.default =
-        pkgs.mkShell {buildInputs = [sfdx pkgs.node2nix];};
+        pkgs.mkShell {buildInputs = [sfdx sf pkgs.node2nix];};
     });
 }
