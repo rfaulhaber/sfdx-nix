@@ -16,25 +16,22 @@
       nodePackages =
         (pkgs.callPackage ./default.nix {
           inherit pkgs system;
-          nodejs = pkgs.nodejs_20;
+          nodejs = pkgs.nodejs_18;
         });
-      sfdx = pkgs.stdenv.mkDerivation {
+      # TODO can I fix this with a derivation?
+      sfdx = nodePackages.sfdx-cli // {
         name = "sfdx";
         pname = "sfdx";
-        src = nodePackages.sfdx-cli.src;
-        version = nodePackages.sfdx-cli.version;
       };
-      sf = pkgs.stdenv.mkDerivation {
+      sf = nodePackages."@salesforce/cli" // {
         name = "sf";
         pname = "sf";
-        src = nodePackages."@salesforce/cli".src;
-        version = nodePackages."@salesforce/cli".version;
       };
     in rec {
       packages.sfdx = sfdx;
       packages.sf = sf;
-      # packages.default = packages.sf;
+      packages.default = packages.sf;
       devShells.default =
-        pkgs.mkShell {buildInputs = [sfdx sf pkgs.node2nix];};
+        pkgs.mkShell {buildInputs = [pkgs.node2nix];};
     });
 }
