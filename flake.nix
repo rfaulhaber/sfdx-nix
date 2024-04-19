@@ -35,10 +35,12 @@
           pname = name;
           nativeBuildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps];
           phases = ["unpackPhase" "configurePhase" "buildPhase" "installPhase" "distPhase"];
+
           configurePhase = ''
             export HOME=$PWD/yarn_home
             yarn config --offline set yarn-offline-mirror ${offlineCache}
           '';
+
           buildPhase = ''
             export HOME=$PWD/yarn_home
             export SF_HIDE_RELEASE_NOTES=true
@@ -47,7 +49,7 @@
             yarn --offline install --ignore-scripts
             chmod -R +rw $PWD/node_modules
             patchShebangs --build node_modules
-            yarn --offline run build
+            yarn --offline --production=true run build
           '';
 
           installPhase = ''
@@ -63,8 +65,8 @@
 
           distPhase = ''
             mkdir -p $out/tarballs/
-            yarn pack --offline --ignore-scripts --filename $out/tarballs/${name}/.tgz
-'';
+            yarn pack --offline --ignore-scripts --production=true --filename $out/tarballs/${name}/.tgz
+          '';
         };
     in {
       packages.sf = sf;
