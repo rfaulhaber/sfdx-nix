@@ -17,23 +17,24 @@
       };
 
       sf = let
-        name = "sf";
-        version = "2.38.0";
+        name = "salesforce-cli";
+        version = "2.39.1";
         src = pkgs.fetchFromGitHub {
           owner = "salesforcecli";
           repo = "cli";
           rev = version;
-          hash = "sha256-D6RIEoZhh9LgbNyi88UZ8cjgnPJRjv7SxczgvCSQtYA=";
+          hash = "sha256-BQAL3SFI/GUj42urdRyTWbSeX3jrwXXejqpH6M4CXk8=";
         };
         offlineCache = pkgs.fetchYarnDeps {
-          yarnLock = src + "/yarn.lock";
-          hash = "sha256-+2s9eGVyGlrGlmbPjNdGnSYf4IHzRCIkKZCXXj4tygI=";
+          yarnLock = "${src}/yarn.lock";
+          hash = "sha256-OkiphOEXpUhXp5Hh8Tn+62SvmbNwD4qGsIalp7vCpuk=";
         };
       in
         pkgs.stdenv.mkDerivation {
           inherit version src;
           pname = name;
           nativeBuildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps];
+          phases = ["unpackPhase" "configurePhase" "buildPhase" "installPhase" "distPhase"];
           configurePhase = ''
             export HOME=$PWD/yarn_home
             yarn config --offline set yarn-offline-mirror ${offlineCache}
@@ -54,15 +55,22 @@
             mv node_modules $out/
             mv dist $out/
             mkdir -p $out/bin
-            mv bin/run.js $out/bin/sf
+            mv bin/run.js $out/bin/${name}
+            # necessary for some runtime configuration
+            cp ./package.json $out
             patchShebangs $out
+          '';
+
+          distPhase = ''
+            mkdir -p $out/tarballs/
+            yarn pack --offline --ignore-scripts --filename $out/tarballs/${name}/.tgz
 '';
         };
-    in rec {
+    in {
       packages.sf = sf;
-      packages.default = packages.sf;
+      packages.default = sf;
       formatter = pkgs.alejandra;
       devShells.default =
-        pkgs.mkShell {buildInputs = with pkgs; [node2nix nodejs_21];};
+        pkgs.mkShell {buildInputs = with pkgs; [nodejs yarn];};
     });
 }
