@@ -16,24 +16,25 @@
         inherit system;
       };
 
-      sf = let
+      sfPackage = let
         name = "salesforce-cli";
-        version = "2.39.1";
+        version = "2.46.6";
         src = pkgs.fetchFromGitHub {
           owner = "salesforcecli";
           repo = "cli";
           rev = version;
-          hash = "sha256-BQAL3SFI/GUj42urdRyTWbSeX3jrwXXejqpH6M4CXk8=";
+          hash = "sha256-8LurAYl1Nba17lps+F/m5QMa1/6Lr833Lxqo4HL2imc=";
         };
+        lib = pkgs.lib;
         offlineCache = pkgs.fetchYarnDeps {
           yarnLock = "${src}/yarn.lock";
-          hash = "sha256-OkiphOEXpUhXp5Hh8Tn+62SvmbNwD4qGsIalp7vCpuk=";
+          hash = "sha256-aoSKGRYByyetUF5SXISHva2a2nt62TKTGAcWGV4seoE=";
         };
       in
         pkgs.stdenv.mkDerivation {
           inherit version src;
           pname = name;
-          nativeBuildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps];
+          nativeBuildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps fixup-yarn-lock];
           phases = ["unpackPhase" "configurePhase" "buildPhase" "installPhase" "distPhase"];
 
           configurePhase = ''
@@ -57,7 +58,7 @@
             mv node_modules $out/
             mv dist $out/
             mkdir -p $out/bin
-            mv bin/run.js $out/bin/${name}
+            mv bin/run.js $out/bin/sf
             # necessary for some runtime configuration
             cp ./package.json $out
             patchShebangs $out
@@ -65,12 +66,21 @@
 
           distPhase = ''
             mkdir -p $out/tarballs/
-            yarn pack --offline --ignore-scripts --production=true --filename $out/tarballs/${name}/.tgz
+            yarn pack --offline --ignore-scripts --production=true --filename $out/tarballs/sf/.tgz
           '';
         };
     in {
-      packages.sf = sf;
-      packages.default = sf;
+      packages = rec {
+        sf = sfPackage;
+        default = sf;
+      };
+      apps = rec {
+        sf = flake-utils.lib.mkApp {
+          drv = self.packages.${system}.sf;
+          exePath = "/bin/sf";
+        };
+        default = sf;
+      };
       formatter = pkgs.alejandra;
       devShells.default =
         pkgs.mkShell {buildInputs = with pkgs; [nodejs yarn];};
