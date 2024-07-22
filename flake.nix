@@ -18,17 +18,17 @@
 
       sfPackage = let
         name = "salesforce-cli";
-        version = "2.48.6";
+        version = "2.50.6";
         src = pkgs.fetchFromGitHub {
           owner = "salesforcecli";
           repo = "cli";
           rev = version;
-          hash = "sha256-MUzNJDTWe9l4cjB7PmqKW6gNpMe63bhvHNBwyDQjdLs=";
+          hash = "sha256-V27lGCGzcG1Vki6Dd1mfJlZEaSY6s8Vybvq57+9Xkb4=";
         };
         lib = pkgs.lib;
         offlineCache = pkgs.fetchYarnDeps {
           yarnLock = "${src}/yarn.lock";
-          hash = "sha256-LDZEA/k5gxPtjIn8BOsrpKXXVLbNd4FtqTfe9d8t7Xw=";
+          hash = "sha256-asbGL1fuK2s6Uwr2LU1VtJtk+MEv8Z+kUoLBk63G9lQ=";
         };
       in
         pkgs.stdenv.mkDerivation {
@@ -39,7 +39,7 @@
 
           configurePhase = ''
             export HOME=$PWD/yarn_home
-            yarn config --offline set yarn-offline-mirror ${offlineCache}
+            yarn --offline config set yarn-offline-mirror ${offlineCache}
           '';
 
           buildPhase = ''
