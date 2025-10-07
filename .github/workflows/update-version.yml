@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up Nix
-      uses: cachix/install-nix-action@v27
+      uses: cachix/install-nix-action@v31
       with:
         nix_path: nixpkgs=channel:nixos-unstable
 
@@ -100,13 +100,6 @@ jobs:
       run: |
         nix build
         nix shell --command sh -c "echo 'Installing the new version successfully.'"
-
-    - name: Push to Cachix
-      if: env.update_needed == 'true'
-      uses: cachix/cachix-action@v14
-      with:
-        name: sfdx-nix
-        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
     - name: Check for existing PRs, close them, and delete branches
       if: env.update_needed == 'true'
