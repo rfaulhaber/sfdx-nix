@@ -81,10 +81,10 @@ jobs:
           fi
           echo "Yarn hash: $yarn_hash"
 
-          jq -n --arg cliVersion $version \
-                --arg cliHash $repo_hash \
-                --arg yarnHash $yarn_hash \
-                "{cliVersion: $cliVersion, cliHash: $cliHash, yarnHash: $yarnHash}" > versions.json
+          jq -n --arg cliVersion "$version" \
+                --arg cliHash "$repo_hash" \
+                --arg yarnHash "$yarn_hash" \
+                '{cliVersion: $cliVersion, cliHash: $cliHash, yarnHash: $yarnHash}' > versions.json
 
       - name: Test result by installing
         if: env.update_needed == 'true'
