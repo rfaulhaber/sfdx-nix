@@ -58,7 +58,7 @@ jobs:
       - name: Fetch new hashes
         if: env.update_needed == 'true'
         run: |
-          repo_hash=$(nix-prefetch-url --unpack https://github.com/salesforcecli/cli/archive/refs/tags/$version.tar.gz)
+          repo_code=$(nix-prefetch-url --unpack https://github.com/salesforcecli/cli/archive/refs/tags/$version.tar.gz)
           echo "Repo code: $repo_hash"
           repo_hash=$(nix hash convert --hash-algo sha256 $repo_code)
 
