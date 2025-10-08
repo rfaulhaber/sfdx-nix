@@ -1,5 +1,5 @@
 {
-  description = "Nix flake that provides sfdx.";
+  description = "Nix flake that provides the Salesforce CLI.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
@@ -21,16 +21,10 @@
         sfPackage = import ./package.nix {inherit pkgs;};
       in {
         formatter = pkgs.alejandra;
-        packages = {
-          sf = sfPackage;
-          default = sfPackage;
-        };
-        apps = rec {
-          sf = {
-            type = "app";
-            program = self'.packages.default.passthru.exePath;
-          };
-          default = sf;
+        packages.default = sfPackage;
+        apps.default = {
+          type = "app";
+          program = self'.packages.default.passthru.exePath;
         };
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps fixup-yarn-lock];
