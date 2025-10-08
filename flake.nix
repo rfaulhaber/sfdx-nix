@@ -3,86 +3,38 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
-    flake-utils.url = "github:numtide/flake-utils";
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
-    flake-utils,
+    flake-parts,
   }:
-    flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs {
-        inherit system;
+    flake-parts.lib.mkFlake {inherit inputs;} ({system, ...}: {
+      systems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
+      perSystem = {
+        pkgs,
+        self',
+        ...
+      }: let
+        sfPackage = import ./package.nix {inherit pkgs;};
+      in {
+        formatter = pkgs.alejandra;
+        packages = {
+          sf = sfPackage;
+          default = sfPackage;
+        };
+        apps = rec {
+          sf = {
+            type = "app";
+            program = self'.packages.default.passthru.exePath;
+          };
+          default = sf;
+        };
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps fixup-yarn-lock];
+        };
       };
-
-      sfPackage = let
-        name = "salesforce-cli";
-        versions = builtins.fromJSON (builtins.readFile ./versions.json);
-        version = versions.cliVersion;
-        src = pkgs.fetchFromGitHub {
-          owner = "salesforcecli";
-          repo = "cli";
-          rev = version;
-          hash = versions.cliHash;
-        };
-        offlineCache = pkgs.fetchYarnDeps {
-          yarnLock = "${src}/yarn.lock";
-          hash = versions.yarnHash;
-        };
-      in
-        pkgs.stdenv.mkDerivation {
-          inherit version src;
-          pname = name;
-          nativeBuildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps fixup-yarn-lock];
-          phases = ["unpackPhase" "configurePhase" "buildPhase" "installPhase" "distPhase"];
-
-          configurePhase = ''
-            export HOME=$PWD/yarn_home
-            yarn --offline config set yarn-offline-mirror ${offlineCache}
-          '';
-
-          buildPhase = ''
-            export HOME=$PWD/yarn_home
-            export SF_HIDE_RELEASE_NOTES=true
-            fixup-yarn-lock ./yarn.lock
-            chmod -R +rw $PWD/scripts
-            yarn --offline install --ignore-scripts
-            chmod -R +rw $PWD/node_modules
-            patchShebangs --build node_modules
-            yarn --offline --production=true run build
-          '';
-
-          installPhase = ''
-            mkdir $out
-            mv node_modules $out/
-            mv dist $out/
-            mkdir -p $out/bin
-            mv bin/run.js $out/bin/sf
-            # necessary for some runtime configuration
-            cp ./package.json $out
-            patchShebangs $out
-          '';
-
-          distPhase = ''
-            mkdir -p $out/tarballs/
-            yarn pack --offline --ignore-scripts --production=true --filename $out/tarballs/sf/.tgz
-          '';
-        };
-    in {
-      packages = rec {
-        sf = sfPackage;
-        default = sf;
-      };
-      apps = rec {
-        sf = flake-utils.lib.mkApp {
-          drv = self.packages.${system}.sf;
-          exePath = "/bin/sf";
-        };
-        default = sf;
-      };
-      formatter = pkgs.alejandra;
-      devShells.default =
-        pkgs.mkShell {buildInputs = with pkgs; [nodejs yarn typescript-language-server prettier prefetch-yarn-deps];};
     });
 }
