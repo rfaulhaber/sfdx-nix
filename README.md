@@ -1,5 +1,7 @@
 # sfdx-nix
 
+[![built with garnix](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fgarnix.io%2Fapi%2Fbadges%2Frfaulhaber%2Fsfdx-nix%3Fbranch%3Dmain)](https://garnix.io/repo/rfaulhaber/sfdx-nix)
+
 Simple Nix flake that provides the [Salesforce CLI](https://developer.salesforce.com/tools/salesforcecli) for Salesforce. You can use it like any other flake.
 
 This project is in no way affiliated with Salesforce.
