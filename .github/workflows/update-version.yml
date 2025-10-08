@@ -58,27 +58,14 @@ jobs:
       - name: Fetch new hashes
         if: env.update_needed == 'true'
         run: |
-          repo_code=$(nix-prefetch-url --unpack https://github.com/salesforcecli/cli/archive/refs/tags/$version.tar.gz)
-          echo "Repo code: $repo_code"
-          repo_hash=$(nix hash to-base64 --type sha256 $repo_code)
-
-          if [ -z "$repo_hash" ]; then
-            echo "Repo hash caculation got empty value."
-            exit 1
-          fi
-          echo "Repo hash: $repo_hash"
+          repo_hash=$(nix-prefetch-url --unpack https://github.com/salesforcecli/cli/archive/refs/tags/$version.tar.gz)
+          echo "Repo code: $repo_hash"
 
           temp_dir=$(mktemp -d)
           curl -sS -o "$temp_dir/yarn.lock" "https://raw.githubusercontent.com/salesforcecli/cli/$version/yarn.lock"
 
-          yarn_code=$(prefetch-yarn-deps "$temp_dir/yarn.lock")
-          echo "Yarn code: $yarn_code"
-          yarn_hash=$(nix hash to-base64 --type sha256 $yarn_code)
+          yarn_hash=$(prefetch-yarn-deps "$temp_dir/yarn.lock")
 
-          if [ -z "$yarn_hash" ]; then
-            echo "Yarn hash caculation got empty value."
-            exit 1
-          fi
           echo "Yarn hash: $yarn_hash"
 
           jq -n --arg cliVersion "$version" \
