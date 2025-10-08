@@ -60,11 +60,26 @@ jobs:
         run: |
           repo_hash=$(nix-prefetch-url --unpack https://github.com/salesforcecli/cli/archive/refs/tags/$version.tar.gz)
           echo "Repo code: $repo_hash"
+          repo_hash=$(nix hash convert --hash-algo sha256 $repo_code)
+
+          if [ -z "$repo_hash" ]; then
+            echo "Repo hash calculation got empty value."
+            exit 1
+          fi
+
+          echo "Repo hash: $repo_hash"
 
           temp_dir=$(mktemp -d)
           curl -sS -o "$temp_dir/yarn.lock" "https://raw.githubusercontent.com/salesforcecli/cli/$version/yarn.lock"
 
-          yarn_hash=$(prefetch-yarn-deps "$temp_dir/yarn.lock")
+          yarn_code=$(prefetch-yarn-deps "$temp_dir/yarn.lock")
+          echo "Yarn code: $yarn_code"
+          yarn_hash=$(nix hash convert --hash-algo sha256 $yarn_code)
+
+          if [ -z "$yarn_hash" ]; then
+            echo "Yarn hash calculation got empty value."
+            exit 1
+          fi
 
           echo "Yarn hash: $yarn_hash"
 
