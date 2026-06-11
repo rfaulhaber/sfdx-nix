@@ -28,8 +28,8 @@ You can add it to a NixOS configuration like any other flake as well. Something 
 ```nix
 {
   inputs = {
-    nixpkgs = "github:NixOS/nixpkgs";
-    sfdx-nix = "github:rfaulhaber/sfdx-nix";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    sfdx-nix.url = "github:rfaulhaber/sfdx-nix";
   };
   outputs = {
     nixpkgs,
@@ -41,12 +41,12 @@ You can add it to a NixOS configuration like any other flake as well. Something 
       system = "x86_64-linux";
       modules = [
         # ...
-        {...}: {
+        ({...}: {
           # or added to your user packages
           environment.systemPackages = [
             sfdx-nix.packages."x86_64-linux".default
           ];
-        }
+        })
       ];
     };
   };

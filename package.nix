@@ -1,5 +1,4 @@
 {pkgs}: let
-  name = "salesforce-cli";
   versions = builtins.fromJSON (builtins.readFile ./versions.json);
   version = versions.cliVersion;
   src = pkgs.fetchFromGitHub {
@@ -13,12 +12,12 @@
     hash = versions.yarnHash;
   };
 in
-  pkgs.stdenv.mkDerivation (finalAttrs: {
+  pkgs.stdenv.mkDerivation {
     inherit version src;
-    pname = name;
+    pname = "salesforce-cli";
     nativeBuildInputs = with pkgs; [nodejs yarn prefetch-yarn-deps fixup-yarn-lock];
-    phases = ["unpackPhase" "configurePhase" "buildPhase" "installPhase"];
-    passthru.exePath = "${finalAttrs.finalPackage}/bin/sf";
+    # leave the bundled node_modules untouched; shebangs are patched in installPhase
+    dontFixup = true;
 
     configurePhase = ''
       export HOME=$PWD/yarn_home
@@ -46,4 +45,12 @@ in
       cp ./package.json $out
       patchShebangs $out
     '';
-  })
+
+    meta = {
+      description = "CLI for the Salesforce platform";
+      homepage = "https://developer.salesforce.com/tools/salesforcecli";
+      license = pkgs.lib.licenses.bsd3;
+      mainProgram = "sf";
+      platforms = ["x86_64-linux" "aarch64-linux" "aarch64-darwin"];
+    };
+  }
