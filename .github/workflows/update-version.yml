@@ -17,19 +17,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # The deploy key lets the push bypass the ruleset on main ("Deploy keys"
+      # is on its bypass list); the GitHub Actions app can't be a bypass actor
+      # on personal repos.
       - name: Checkout the repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
 
       - name: Set up Nix
         uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixos-unstable
 
-      # Pushes made with GITHUB_TOKEN don't trigger other workflows, so the
-      # cachix workflow won't run for the bot's commits. Push the build from
-      # this job instead.
+      # The deploy-key push retriggers the cachix workflow, but push the build
+      # from this job too so the new derivation is cached without waiting on a
+      # second build.
       - name: Set up Cachix
-        uses: cachix/cachix-action@v14
+        uses: cachix/cachix-action@v16
         with:
           name: sfdx-nix
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
